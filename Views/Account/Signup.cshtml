@@ -1,0 +1,75 @@
+@model MyMvcApp.Models.Signupinfo
+@{
+    }
+
+
+<h2>Sign up </h2>
+
+
+<div class ="container">
+    <form action ="/account/Signup" method ="post">
+    <div class ='formgroup'>
+        <lable asp-for="EmailID"> Email ID</lable>
+        <input class = "form-input "  asp-for="EmailID"/>
+    </div>
+
+    
+     <div class ='formgroup'>
+        <lable asp-for="FirstName"> First Name</lable>
+        <input class = "form-input "  asp-for="FirstName"/>
+    </div>
+
+     <div class ='formgroup'>
+        <lable asp-for="LastName"> Last Name</lable>
+        <input class = "form-input "  asp-for="LastName"/>
+    </div>
+     <div class ='formgroup'>
+        <lable asp-for="PhoneNo"> Phone No</lable>
+        <input class = "form-input "  asp-for="PhoneNo"/>
+    </div>
+
+  <div class ='formgroup'>
+        <lable asp-for="Address"> Address </lable>
+        <input class = "form-input "  asp-for="Address"/>
+    </div>
+
+   
+
+    <label>
+    Gender
+</label>
+
+<div class='form-check'>
+    <input class="form-check-input" type="radio" id="genderFemale" name="Gender" value="Female">
+    <label class="form-check-label" for="genderFemale">
+        Female
+    </label>
+</div>
+
+<div class='form-check'>
+    <input class="form-check-input" type="radio" id="genderMale" name="Gender" value="Male">
+    <label class="form-check-label" for="genderMale">
+        Male
+    </label>
+</div>
+
+     
+     
+     <div class ='formgroup'>
+        <lable  asp-for="Password"> Password</lable>
+        <input class = "form-input " asp-for="Password" type ="password"/>
+    </div>
+    
+
+
+     <div class ='formgroup'>
+        <button type="sumbmit" class="btn btn-signup"> Sign up </button>
+        <button  class="btn btn-cancel"> Cancel </button>
+      
+    </div>
+    <p>
+    <a href="@Url.Action("SignupUserList", "Account")">View Signup User List</a>
+</p>
+
+    </form>
+</div>s

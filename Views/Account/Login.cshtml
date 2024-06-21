@@ -1,0 +1,27 @@
+@model MyMvcApp.Models.Signupinfo
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h2>Login</h2>
+
+<form asp-action="Login" method="post">
+    <div class="form-group">
+        <label asp-for="EmailID"></label>
+        <input asp-for="EmailID" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Password"></label>
+        <input asp-for="Password" type="password" class="form-control" />
+    </div>
+     <div class ='formgroup'>
+        <button type="sumbmit" style="background-color: green ; color: white;" > Login in  </button>
+        <button style="background-color: Red ; color: white;"> Cancel </button>
+      
+    </div>
+</form>
+
+<p>
+    <a href="@Url.Action("Signup", "Account")">Sign Up</a>
+</p>
